@@ -1,0 +1,55 @@
+{
+    "id": 44458,
+    "url": "https://www.tvmaze.com/shows/44458/ted-lasso",
+    "name": "Ted Lasso",
+    "type": "Scripted",
+    "language": "English",
+    "genres": [
+        "Drama",
+        "Comedy",
+        "Sports"
+    ],
+    "status": "Ended",
+    "runtime": null,
+    "averageRuntime": 42,
+    "premiered": "2020-08-14",
+    "ended": "2023-05-31",
+    "officialSite": "https://tv.apple.com/show/ted-lasso/umc.cmc.vtoh0mn0xn7t3c643xqonfzy",
+    "schedule": {
+        "time": "",
+        "days": [
+            "Wednesday"
+        ]
+    },
+    "rating": {
+        "average": 8.1
+    },
+    "weight": 97,
+    "network": null,
+    "webChannel": {
+        "id": 310,
+        "name": "Apple TV+",
+        "country": null,
+        "officialSite": "https://tv.apple.com/"
+    },
+    "dvdCountry": null,
+    "externals": {
+        "tvrage": null,
+        "thetvdb": 383203,
+        "imdb": "tt10986410"
+    },
+    "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/457/1142533.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/457/1142533.jpg"
+    },
+    "summary": "<p><b>Ted Lasso </b>centers on an idealistic — and clueless — all-American football coach hired to manage an English football club — despite having no soccer coaching experience at all.</p>",
+    "updated": 1687357608,
+    "_links": {
+        "self": {
+            "href": "https://api.tvmaze.com/shows/44458"
+        },
+        "previousepisode": {
+            "href": "https://api.tvmaze.com/episodes/2490079"
+        }
+    }
+}

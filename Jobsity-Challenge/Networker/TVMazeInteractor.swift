@@ -20,13 +20,13 @@ final class TVMazeInteractor {
             return Fail(error: APIError.invalidPage).eraseToAnyPublisher() 
         }
         
-        guard let url = TVMazeEndpoints.shows.url,
-              let paginatedURL = url.appendingQueryItem(name: "page", value: "\(page)")
+        guard let base = TVMazeEndpoints.shows.url,
+              let url = base.appendingQueryItem(name: "page", value: "\(page)")
         else {
             return Fail(error: APIError.invalidURL).eraseToAnyPublisher()
         }
 
-        return apiClient.fetch(from: paginatedURL, as: [ShowDetailsModel].self)
+        return apiClient.fetch(from: url, as: [ShowDetailsModel].self)
     }
     
     func fetchShowDetails(showId: Int) -> AnyPublisher<ShowDetailsModel, Error> {
@@ -35,5 +35,15 @@ final class TVMazeInteractor {
         }
         
         return apiClient.fetch(from: url, as: ShowDetailsModel.self)
+    }
+    
+    func fetchShowLookup(_ term: String) -> AnyPublisher<[ShowLookupModel], Error>{
+        guard let base = TVMazeEndpoints.searchShows.url,
+              let url = base.appendingQueryItem(name: "q", value: "\(term)")
+        else {
+            return Fail(error: APIError.invalidURL).eraseToAnyPublisher()
+        }
+        
+        return apiClient.fetch(from: url, as: [ShowLookupModel].self)
     }
 }

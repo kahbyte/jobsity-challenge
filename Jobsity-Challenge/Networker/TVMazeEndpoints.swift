@@ -9,12 +9,15 @@ import Foundation
 
 enum TVMazeEndpoints {
     case shows
+    case searchShows
     case showDetails(showId: Int)
     
     var path: String {
         switch self {
         case .shows:
             return "/shows"
+        case .searchShows:
+            return "/search/shows"
         case .showDetails(let showId):
             return "/shows/\(showId)"
         }

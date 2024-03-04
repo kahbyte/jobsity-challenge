@@ -11,7 +11,7 @@ import SwiftUI
 struct Jobsity_ChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
