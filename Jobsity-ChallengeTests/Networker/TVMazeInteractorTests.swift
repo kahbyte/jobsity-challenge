@@ -151,5 +151,105 @@ final class TVMazeInteractorTests: XCTestCase {
 
         wait(for: [expectation], timeout: 10.0)
     }
+    
+    func test_fetchEpisodeList_withValidConfiguration_shouldReturnExpectedData() {
+        let expectation = XCTestExpectation(description: "Fetch episode list")
+        
+        let showId = 1
+        let dummyEpisode: EpisodeModel = JSONReader.load("EpisodeModelMock")
+        let dummyEpisodeData = try! JSONEncoder().encode([dummyEpisode])
+        requestMock.dataMock = dummyEpisodeData
+        
+        sut.fetchEpisodeList(for: showId)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    XCTFail("Fetch failed with error: \(error)")
+                case .finished:
+                    break
+                }
+            }, receiveValue: { episodes in
+                XCTAssertEqual(episodes.count, 1)
+                XCTAssertEqual(episodes.first?.id, dummyEpisode.id)
+                XCTAssertEqual(episodes.first?.name, dummyEpisode.name)
+                expectation.fulfill()
+            })
+            .store(in: &cancellables)
+        
+        wait(for: [expectation], timeout: 10.0)
+        requestMock.verifyFetchWasCalledOnce()
+    }
+
+    func test_fetchEpisodeList_withInvalidShowId_shouldReturnInvalidURLError() {
+        let expectation = XCTestExpectation(description: "Fetch episode list with invalid showId")
+
+        requestMock.errorMock = APIError.invalidURL
+
+        sut.fetchEpisodeList(for: -1)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    XCTAssertEqual(error as? APIError, APIError.invalidURL)
+                    expectation.fulfill()
+                case .finished:
+                    XCTFail("Fetch should not complete successfully")
+                }
+            }, receiveValue: { _ in
+                XCTFail("Fetch should not return a value")
+            })
+            .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 10.0)
+    }
+
+    func test_fetchCast_withValidConfiguration_shouldReturnExpectedData() {
+        let expectation = XCTestExpectation(description: "Fetch cast")
+        
+        let showId = 1
+        let dummyCast: Cast = JSONReader.load("CastDetailsMock")
+        let dummyCastData = try! JSONEncoder().encode([dummyCast])
+        requestMock.dataMock = dummyCastData
+        
+        sut.fetchCast(for: showId)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    XCTFail("Fetch failed with error: \(error)")
+                case .finished:
+                    break
+                }
+            }, receiveValue: { cast in
+                XCTAssertEqual(cast.count, 1)
+                XCTAssertEqual(cast.first?.id, dummyCast.id)
+                XCTAssertEqual(cast.first?.person.name, dummyCast.person.name)
+                expectation.fulfill()
+            })
+            .store(in: &cancellables)
+        
+        wait(for: [expectation], timeout: 10.0)
+        requestMock.verifyFetchWasCalledOnce()
+    }
+
+    func test_fetchCast_withInvalidShowId_shouldReturnInvalidURLError() {
+        let expectation = XCTestExpectation(description: "Fetch cast with invalid showId")
+
+        requestMock.errorMock = APIError.invalidURL
+
+        sut.fetchCast(for: -1)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    XCTAssertEqual(error as? APIError, APIError.invalidURL)
+                    expectation.fulfill()
+                case .finished:
+                    XCTFail("Fetch should not complete successfully")
+                }
+            }, receiveValue: { _ in
+                XCTFail("Fetch should not return a value")
+            })
+            .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 10.0)
+    }
 
 }
