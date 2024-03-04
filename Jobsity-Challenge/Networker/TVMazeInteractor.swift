@@ -11,6 +11,7 @@ import Combine
 protocol TVMazeInteractorProtocol {
     func fetchShowList(page: Int) -> AnyPublisher<[ShowDetailsModel], Error>
     func fetchShowDetails(showId: Int) -> AnyPublisher<ShowDetailsModel, Error>
+    func fetchEpisodeList(for showId: Int) -> AnyPublisher<[EpisodeModel], Error>
     func fetchShowLookup(_ term: String) -> AnyPublisher<[ShowLookupModel], Error>
 }
 
@@ -51,5 +52,13 @@ final class TVMazeInteractor: TVMazeInteractorProtocol  {
         }
         
         return apiClient.fetch(from: url, as: [ShowLookupModel].self)
+    }
+    
+    func fetchEpisodeList(for showId: Int) -> AnyPublisher<[EpisodeModel], Error> {
+        guard let url = TVMazeEndpoints.episodes(showId: showId).url else {
+            return Fail(error: APIError.invalidURL).eraseToAnyPublisher()
+        }
+
+        return apiClient.fetch(from: url, as: [EpisodeModel].self)
     }
 }
