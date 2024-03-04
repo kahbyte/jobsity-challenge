@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct ShowLookupModel: Decodable {
+struct ShowLookupModel: Codable {
     let show: ShowDetailsModel?
 }

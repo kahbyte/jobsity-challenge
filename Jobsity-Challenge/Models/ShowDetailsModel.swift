@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ShowDetailsModel: Decodable, Identifiable, Equatable {
+struct ShowDetailsModel: Codable, Identifiable, Equatable {
     let id: Int?
     let url: String?
     let name: String?

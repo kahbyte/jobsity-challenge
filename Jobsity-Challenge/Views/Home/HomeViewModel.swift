@@ -11,9 +11,9 @@ final class HomeViewModel: ObservableObject {
     @Published var list: [ShowDetailsModel] = []
     @Published var searchList: [ShowDetailsModel] = []
     private var cancellable: AnyCancellable?
-    private var interactor: TVMazeInteractor
+    private var interactor: TVMazeInteractorProtocol
 
-    init(interactor: TVMazeInteractor = .init()) {
+    init(interactor: TVMazeInteractorProtocol = TVMazeInteractor()) {
         self.interactor = interactor
     }
     
