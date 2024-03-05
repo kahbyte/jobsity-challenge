@@ -11,6 +11,8 @@ import Combine
 protocol TVMazeInteractorProtocol {
     func fetchShowList(page: Int) -> AnyPublisher<[ShowDetailsModel], Error>
     func fetchShowDetails(showId: Int) -> AnyPublisher<ShowDetailsModel, Error>
+    func fetchEpisodeList(for showId: Int) -> AnyPublisher<[EpisodeModel], Error>
+    func fetchCast(for showId: Int) -> AnyPublisher<[Cast], Error>
     func fetchShowLookup(_ term: String) -> AnyPublisher<[ShowLookupModel], Error>
 }
 
@@ -36,7 +38,9 @@ final class TVMazeInteractor: TVMazeInteractorProtocol  {
     }
     
     func fetchShowDetails(showId: Int) -> AnyPublisher<ShowDetailsModel, Error> {
-        guard let url = TVMazeEndpoints.showDetails(showId: showId).url else {
+        guard let base = TVMazeEndpoints.showDetails(showId: showId).url,
+              let url = base.appendingQueryItem(name: "embed", value: "cast")
+        else {
             return Fail(error: APIError.invalidURL).eraseToAnyPublisher()
         }
         
@@ -51,5 +55,21 @@ final class TVMazeInteractor: TVMazeInteractorProtocol  {
         }
         
         return apiClient.fetch(from: url, as: [ShowLookupModel].self)
+    }
+    
+    func fetchEpisodeList(for showId: Int) -> AnyPublisher<[EpisodeModel], Error> {
+        guard let url = TVMazeEndpoints.episodes(showId: showId).url else {
+            return Fail(error: APIError.invalidURL).eraseToAnyPublisher()
+        }
+
+        return apiClient.fetch(from: url, as: [EpisodeModel].self)
+    }
+    
+    func fetchCast(for showId: Int) -> AnyPublisher<[Cast], Error> {
+        guard let url = TVMazeEndpoints.cast(showId: showId).url else {
+            return Fail(error: APIError.invalidURL).eraseToAnyPublisher()
+        }
+
+        return apiClient.fetch(from: url, as: [Cast].self)
     }
 }

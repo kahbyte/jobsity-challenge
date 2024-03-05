@@ -1,0 +1,41 @@
+{
+    "person": {
+        "id": 94059,
+        "url": "https://www.tvmaze.com/people/94059/juno-temple",
+        "name": "Juno Temple",
+        "country": {
+            "name": "United Kingdom",
+            "code": "GB",
+            "timezone": "Europe/London"
+        },
+        "birthday": "1989-07-21",
+        "deathday": null,
+        "gender": "Female",
+        "image": {
+            "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/168/420493.jpg",
+            "original": "https://static.tvmaze.com/uploads/images/original_untouched/168/420493.jpg"
+        },
+        "updated": 1705454728,
+        "_links": {
+            "self": {
+                "href": "https://api.tvmaze.com/people/94059"
+            }
+        }
+    },
+    "character": {
+        "id": 771187,
+        "url": "https://www.tvmaze.com/characters/771187/ted-lasso-keeley-jones",
+        "name": "Keeley Jones",
+        "image": {
+            "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/276/690413.jpg",
+            "original": "https://static.tvmaze.com/uploads/images/original_untouched/276/690413.jpg"
+        },
+        "_links": {
+            "self": {
+                "href": "https://api.tvmaze.com/characters/771187"
+            }
+        }
+    },
+    "self": false,
+    "voice": false
+}

@@ -101,19 +101,13 @@ struct Embedded: Codable {
     let cast: [Cast]?
 }
 
-struct Cast: Codable {
+struct Cast: Codable, Identifiable{
+    var id: Int { person.id ?? 0 }
     let person: Person
     let character: Character?
-    let selfFlag: Bool?
-    let voice: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case person, character, voice
-        case selfFlag = "self"
-    }
 }
 
-struct Person: Codable {
+struct Person: Codable, Identifiable {
     let id: Int?
     let url: String?
     let name: String?
@@ -122,14 +116,10 @@ struct Person: Codable {
     let deathday: String?
     let gender: String?
     let image: ImageModel?
-    let updated: Int?
-    let links: Links?
 }
 
 struct Character: Codable {
     let id: Int?
-    let url: String?
     let name: String?
     let image: ImageModel?
-    let links: Links?
 }

@@ -51,5 +51,609 @@
         "previousepisode": {
             "href": "https://api.tvmaze.com/episodes/2490079"
         }
+    },
+    "_embedded": {
+        "cast": [
+            {
+                "person": {
+                    "id": 41379,
+                    "url": "https://www.tvmaze.com/people/41379/jason-sudeikis",
+                    "name": "Jason Sudeikis",
+                    "country": {
+                        "name": "United States",
+                        "code": "US",
+                        "timezone": "America/New_York"
+                    },
+                    "birthday": "1975-09-18",
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/276/690419.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/276/690419.jpg"
+                    },
+                    "updated": 1709356867,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/41379"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 666029,
+                    "url": "https://www.tvmaze.com/characters/666029/ted-lasso-ted-lasso",
+                    "name": "Ted Lasso",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/276/690411.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/276/690411.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/666029"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 14975,
+                    "url": "https://www.tvmaze.com/people/14975/brendan-hunt",
+                    "name": "Brendan Hunt",
+                    "country": {
+                        "name": "United States",
+                        "code": "US",
+                        "timezone": "America/New_York"
+                    },
+                    "birthday": null,
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/119/298369.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/119/298369.jpg"
+                    },
+                    "updated": 1708725846,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/14975"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 666030,
+                    "url": "https://www.tvmaze.com/characters/666030/ted-lasso-coach-beard",
+                    "name": "Coach Beard",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/276/690417.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/276/690417.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/666030"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 43435,
+                    "url": "https://www.tvmaze.com/people/43435/brett-goldstein",
+                    "name": "Brett Goldstein",
+                    "country": {
+                        "name": "United Kingdom",
+                        "code": "GB",
+                        "timezone": "Europe/London"
+                    },
+                    "birthday": "1980-07-17",
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/432/1081522.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/432/1081522.jpg"
+                    },
+                    "updated": 1705093543,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/43435"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 771185,
+                    "url": "https://www.tvmaze.com/characters/771185/ted-lasso-roy-kent",
+                    "name": "Roy Kent",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/276/690416.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/276/690416.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/771185"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 281961,
+                    "url": "https://www.tvmaze.com/people/281961/billy-harris",
+                    "name": "Billy Harris",
+                    "country": null,
+                    "birthday": null,
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/269/672771.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/269/672771.jpg"
+                    },
+                    "updated": 1685502078,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/281961"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 771192,
+                    "url": "https://www.tvmaze.com/characters/771192/ted-lasso-colin-hughes",
+                    "name": "Colin Hughes",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/352/880935.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/352/880935.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/771192"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 84851,
+                    "url": "https://www.tvmaze.com/people/84851/kola-bokinni",
+                    "name": "Kola Bokinni",
+                    "country": null,
+                    "birthday": null,
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/268/670508.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/268/670508.jpg"
+                    },
+                    "updated": 1695163223,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/84851"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 771193,
+                    "url": "https://www.tvmaze.com/characters/771193/ted-lasso-isaac-mcadoo",
+                    "name": "Isaac McAdoo",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/352/880939.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/352/880939.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/771193"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 50991,
+                    "url": "https://www.tvmaze.com/people/50991/hannah-waddingham",
+                    "name": "Hannah Waddingham",
+                    "country": {
+                        "name": "United Kingdom",
+                        "code": "GB",
+                        "timezone": "Europe/London"
+                    },
+                    "birthday": "1974-11-16",
+                    "deathday": null,
+                    "gender": "Female",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/169/424832.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/169/424832.jpg"
+                    },
+                    "updated": 1708981930,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/50991"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 771182,
+                    "url": "https://www.tvmaze.com/characters/771182/ted-lasso-rebecca-welton",
+                    "name": "Rebecca Welton",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/276/690412.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/276/690412.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/771182"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 37320,
+                    "url": "https://www.tvmaze.com/people/37320/jeremy-swift",
+                    "name": "Jeremy Swift",
+                    "country": {
+                        "name": "United Kingdom",
+                        "code": "GB",
+                        "timezone": "Europe/London"
+                    },
+                    "birthday": "1960-10-19",
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/277/692683.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/277/692683.jpg"
+                    },
+                    "updated": 1703358731,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/37320"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 771183,
+                    "url": "https://www.tvmaze.com/characters/771183/ted-lasso-leslie-higgins",
+                    "name": "Leslie Higgins",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/276/690414.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/276/690414.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/771183"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 80915,
+                    "url": "https://www.tvmaze.com/people/80915/nick-mohammed",
+                    "name": "Nick Mohammed",
+                    "country": {
+                        "name": "United Kingdom",
+                        "code": "GB",
+                        "timezone": "Europe/London"
+                    },
+                    "birthday": "1980-10-04",
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/503/1259070.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/503/1259070.jpg"
+                    },
+                    "updated": 1707601022,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/80915"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 771186,
+                    "url": "https://www.tvmaze.com/characters/771186/ted-lasso-nathan-shelley",
+                    "name": "Nathan Shelley",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/276/690418.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/276/690418.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/771186"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 94059,
+                    "url": "https://www.tvmaze.com/people/94059/juno-temple",
+                    "name": "Juno Temple",
+                    "country": {
+                        "name": "United Kingdom",
+                        "code": "GB",
+                        "timezone": "Europe/London"
+                    },
+                    "birthday": "1989-07-21",
+                    "deathday": null,
+                    "gender": "Female",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/168/420493.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/168/420493.jpg"
+                    },
+                    "updated": 1705454728,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/94059"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 771187,
+                    "url": "https://www.tvmaze.com/characters/771187/ted-lasso-keeley-jones",
+                    "name": "Keeley Jones",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/276/690413.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/276/690413.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/771187"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 114159,
+                    "url": "https://www.tvmaze.com/people/114159/phil-dunster",
+                    "name": "Phil Dunster",
+                    "country": {
+                        "name": "United Kingdom",
+                        "code": "GB",
+                        "timezone": "Europe/London"
+                    },
+                    "birthday": "1992-03-31",
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/155/389936.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/155/389936.jpg"
+                    },
+                    "updated": 1708542764,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/114159"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 771184,
+                    "url": "https://www.tvmaze.com/characters/771184/ted-lasso-jamie-tartt",
+                    "name": "Jamie Tartt",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/276/690415.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/276/690415.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/771184"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 241206,
+                    "url": "https://www.tvmaze.com/people/241206/toheeb-jimoh",
+                    "name": "Toheeb Jimoh",
+                    "country": {
+                        "name": "United Kingdom",
+                        "code": "GB",
+                        "timezone": "Europe/London"
+                    },
+                    "birthday": "1997-04-15",
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/444/1111745.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/444/1111745.jpg"
+                    },
+                    "updated": 1694967556,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/241206"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 771188,
+                    "url": "https://www.tvmaze.com/characters/771188/ted-lasso-sam-obisanya",
+                    "name": "Sam Obisanya",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/352/880934.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/352/880934.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/771188"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 284553,
+                    "url": "https://www.tvmaze.com/people/284553/cristo-fernandez",
+                    "name": "Cristo Fernández",
+                    "country": {
+                        "name": "Mexico",
+                        "code": "MX",
+                        "timezone": "America/Monterrey"
+                    },
+                    "birthday": "1991-01-27",
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/271/678812.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/271/678812.jpg"
+                    },
+                    "updated": 1705752513,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/284553"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 778009,
+                    "url": "https://www.tvmaze.com/characters/778009/ted-lasso-dani-rojas",
+                    "name": "Dani Rojas",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/352/880936.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/352/880936.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/778009"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 52817,
+                    "url": "https://www.tvmaze.com/people/52817/james-lance",
+                    "name": "James Lance",
+                    "country": {
+                        "name": "United Kingdom",
+                        "code": "GB",
+                        "timezone": "Europe/London"
+                    },
+                    "birthday": "1975-09-29",
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/186/467371.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/186/467371.jpg"
+                    },
+                    "updated": 1702219235,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/52817"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 771189,
+                    "url": "https://www.tvmaze.com/characters/771189/ted-lasso-trent-crimm",
+                    "name": "Trent Crimm",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/342/856500.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/342/856500.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/771189"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 20279,
+                    "url": "https://www.tvmaze.com/people/20279/anthony-stewart-head",
+                    "name": "Anthony Stewart Head",
+                    "country": {
+                        "name": "United Kingdom",
+                        "code": "GB",
+                        "timezone": "Europe/London"
+                    },
+                    "birthday": "1954-02-20",
+                    "deathday": null,
+                    "gender": "Male",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/91/227808.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/91/227808.jpg"
+                    },
+                    "updated": 1708453672,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/20279"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 773340,
+                    "url": "https://www.tvmaze.com/characters/773340/ted-lasso-rupert-mannion",
+                    "name": "Rupert Mannion",
+                    "image": null,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/773340"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            },
+            {
+                "person": {
+                    "id": 64563,
+                    "url": "https://www.tvmaze.com/people/64563/sarah-niles",
+                    "name": "Sarah Niles",
+                    "country": null,
+                    "birthday": null,
+                    "deathday": null,
+                    "gender": "Female",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/29/73934.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/29/73934.jpg"
+                    },
+                    "updated": 1703090476,
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/people/64563"
+                        }
+                    }
+                },
+                "character": {
+                    "id": 892095,
+                    "url": "https://www.tvmaze.com/characters/892095/ted-lasso-dr-sharon-fieldstone",
+                    "name": "Dr. Sharon Fieldstone",
+                    "image": {
+                        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/342/856493.jpg",
+                        "original": "https://static.tvmaze.com/uploads/images/original_untouched/342/856493.jpg"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.tvmaze.com/characters/892095"
+                        }
+                    }
+                },
+                "self": false,
+                "voice": false
+            }
+        ]
     }
 }
