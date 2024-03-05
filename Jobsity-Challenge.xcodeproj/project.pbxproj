@@ -128,6 +128,8 @@
 		30D5B3B82B96B0D100FA687A /* CastCreditsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCreditsModel.swift; sourceTree = "<group>"; };
 		30D5B3BA2B96B18600FA687A /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
 		30D5B3BC2B96C4C700FA687A /* EpisodeDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		30D5B3BE2B96C9CD00FA687A /* Jobsity-Challenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Jobsity-Challenge.entitlements"; sourceTree = "<group>"; };
+		30D5B3BF2B96CA5F00FA687A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,8 @@
 		30B99A992B951CA40082B7B9 /* Jobsity-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				30D5B3BF2B96CA5F00FA687A /* Info.plist */,
+				30D5B3BE2B96C9CD00FA687A /* Jobsity-Challenge.entitlements */,
 				30D5B3652B9567C700FA687A /* Helpers */,
 				30D5B3392B951FAA00FA687A /* Models */,
 				30D5B3362B951F2300FA687A /* Commons */,
@@ -689,12 +693,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Jobsity-Challenge/Jobsity-Challenge.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Jobsity-Challenge/Preview Content\"";
 				DEVELOPMENT_TEAM = DTZ9VMVYZ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Jobsity-Challenge/Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "\"bla\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -718,12 +725,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Jobsity-Challenge/Jobsity-Challenge.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Jobsity-Challenge/Preview Content\"";
 				DEVELOPMENT_TEAM = DTZ9VMVYZ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Jobsity-Challenge/Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "\"bla\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
