@@ -13,6 +13,8 @@ protocol TVMazeInteractorProtocol {
     func fetchShowDetails(showId: Int) -> AnyPublisher<ShowDetailsModel, Error>
     func fetchEpisodeList(for showId: Int) -> AnyPublisher<[EpisodeModel], Error>
     func fetchCast(for showId: Int) -> AnyPublisher<[Cast], Error>
+    func fetchGuestCast(for episode: Int) -> AnyPublisher<[Cast], Error>
+    func fetchAppearances(for personId: Int) -> AnyPublisher<[CastCreditsModel], Error>
     func fetchShowLookup(_ term: String) -> AnyPublisher<[ShowLookupModel], Error>
 }
 
@@ -71,5 +73,23 @@ final class TVMazeInteractor: TVMazeInteractorProtocol  {
         }
 
         return apiClient.fetch(from: url, as: [Cast].self)
+    }
+    
+    func fetchGuestCast(for episode: Int) -> AnyPublisher<[Cast], Error> {
+        guard let url = TVMazeEndpoints.episodeGuestAndCast(episode: episode).url else {
+            return Fail(error: APIError.invalidURL).eraseToAnyPublisher()
+        }
+        
+        return apiClient.fetch(from: url, as: [Cast].self)
+    }
+    
+    func fetchAppearances(for personId: Int) -> AnyPublisher<[CastCreditsModel], Error> {
+        guard let base = TVMazeEndpoints.personAppearances(personId: personId).url,
+              let url = base.appendingQueryItem(name: "embed", value: "show")
+        else {
+            return Fail(error: APIError.invalidURL).eraseToAnyPublisher()
+        }
+        
+        return apiClient.fetch(from: url, as: [CastCreditsModel].self)
     }
 }

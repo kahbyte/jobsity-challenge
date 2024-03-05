@@ -251,5 +251,77 @@ final class TVMazeInteractorTests: XCTestCase {
 
         wait(for: [expectation], timeout: 10.0)
     }
+    
+    func test_fetchGuestCast_withValidConfiguration_shouldReturnExpectedData() {
+        let expectation = XCTestExpectation(description: "Fetch guest cast")
+        
+        let episodeId = 1
+        let dummyCast: Cast = JSONReader.load("CastDetailsMock")
+        let dummyCastData = try! JSONEncoder().encode([dummyCast])
+        requestMock.dataMock = dummyCastData
+        
+        sut.fetchGuestCast(for: episodeId)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    XCTFail("Fetch failed with error: \(error)")
+                case .finished:
+                    break
+                }
+            }, receiveValue: { cast in
+                XCTAssertEqual(cast.count, 1)
+                XCTAssertEqual(cast.first?.id, dummyCast.id)
+                XCTAssertEqual(cast.first?.person.name, dummyCast.person.name)
+                expectation.fulfill()
+            })
+            .store(in: &cancellables)
+        
+        wait(for: [expectation], timeout: 10.0)
+        requestMock.verifyFetchWasCalledOnce()
+    }
+
+    func test_fetchGuestCast_withInvalidEpisodeId_shouldReturnInvalidURLError() {
+        let expectation = XCTestExpectation(description: "Fetch guest cast with invalid episodeId")
+
+        requestMock.errorMock = APIError.invalidURL
+
+        sut.fetchGuestCast(for: -1)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    XCTAssertEqual(error as? APIError, APIError.invalidURL)
+                    expectation.fulfill()
+                case .finished:
+                    XCTFail("Fetch should not complete successfully")
+                }
+            }, receiveValue: { _ in
+                XCTFail("Fetch should not return a value")
+            })
+            .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 10.0)
+    }
+
+    func test_fetchAppearances_withInvalidPersonId_shouldReturnInvalidURLError() {
+        let expectation = XCTestExpectation(description: "Fetch appearances with invalid personId")
+
+        requestMock.errorMock = APIError.invalidURL
+
+        sut.fetchAppearances(for: -1)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    XCTAssertEqual(error as? APIError, APIError.invalidURL)
+                    expectation.fulfill()
+                case .finished:
+                    XCTFail("Fetch should not complete successfully")
+                }
+            }, receiveValue: { _ in
+                XCTFail("Fetch should not return a value")
+            })
+            .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 10.0)
+    }
 
 }

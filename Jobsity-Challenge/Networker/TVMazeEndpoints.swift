@@ -10,7 +10,9 @@ import Foundation
 enum TVMazeEndpoints {
     case shows
     case searchShows
+    case personAppearances(personId: Int)
     case episodes(showId: Int)
+    case episodeGuestAndCast(episode: Int)
     case cast(showId: Int)
     case showDetails(showId: Int)
     
@@ -22,8 +24,12 @@ enum TVMazeEndpoints {
             return "/search/shows"
         case .cast(let showId):
             return "/shows/\(showId)/cast"
+        case .personAppearances(let personId):
+            return "/people/\(personId)/castcredits"
         case .episodes(let showId):
             return "/shows/\(showId)/episodes"
+        case .episodeGuestAndCast(let episode):
+            return "/episodes/\(episode)/guestcast"
         case .showDetails(let showId):
             return "/shows/\(showId)"
         }
