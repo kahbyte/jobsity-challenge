@@ -11,6 +11,7 @@ import XCTest
 @testable import Jobsity_Challenge
 
 final class TVMazeInteractorMock: TVMazeInteractorProtocol {
+
     var showList: [ShowDetailsModel] = []
     var showDetails: ShowDetailsModel?
     var showLookup: [ShowLookupModel] = []
@@ -90,6 +91,36 @@ final class TVMazeInteractorMock: TVMazeInteractorProtocol {
                 .eraseToAnyPublisher()
         }
     }
+    
+    var guestCastListToBeReturned: [Cast] = []
+    var guestCastListError: Error?
+    private(set) var fetchGuestCastArgs: [Int] = []
+    func fetchGuestCast(for episode: Int) -> AnyPublisher<[Jobsity_Challenge.Cast], Error> {
+        fetchGuestCastArgs.append(episode)
+        
+        if let error = guestCastListError {
+            return Fail(error: error).eraseToAnyPublisher()
+        } else {
+            return Just(guestCastListToBeReturned)
+                .setFailureType(to: Error.self)
+                .eraseToAnyPublisher()
+        }
+    }
+
+    var appearancesToBeReturned: [CastCreditsModel] = []
+    var appearancesError: Error?
+    private(set) var fetchAppearancesArgs: [Int] = []
+    func fetchAppearances(for personId: Int) -> AnyPublisher<[Jobsity_Challenge.CastCreditsModel], Error> {
+        fetchAppearancesArgs.append(personId)
+        
+        if let error = appearancesError {
+            return Fail(error: error).eraseToAnyPublisher()
+        } else {
+            return Just(appearancesToBeReturned)
+                .setFailureType(to: Error.self)
+                .eraseToAnyPublisher()
+        }
+    }
 }
 
 extension TVMazeInteractorMock {
@@ -159,6 +190,34 @@ extension TVMazeInteractorMock {
     func verifyFetchCastWasNeverCalled(file: StaticString = #file, line: UInt = #line) {
         guard fetchCastArgs.count == 0 else {
             XCTFail("Expected 0, but was called \(fetchCastArgs.count) times", file: file, line: line)
+            return
+        }
+    }
+    
+    func verifyFetchGuestCastWasCalledOnce(file: StaticString = #file, line: UInt = #line) {
+        guard fetchGuestCastArgs.count == 1 else {
+            XCTFail("Expected 1, but was called \(fetchGuestCastArgs.count) times", file: file, line: line)
+            return
+        }
+    }
+
+    func verifyFetchAppearancesWasCalledOnce(file: StaticString = #file, line: UInt = #line) {
+        guard fetchAppearancesArgs.count == 1 else {
+            XCTFail("Expected 1, but was called \(fetchAppearancesArgs.count) times", file: file, line: line)
+            return
+        }
+    }
+
+    func verifyFetchGuestCastWasNeverCalled(file: StaticString = #file, line: UInt = #line) {
+        guard fetchGuestCastArgs.count == 0 else {
+            XCTFail("Expected 0, but was called \(fetchGuestCastArgs.count) times", file: file, line: line)
+            return
+        }
+    }
+
+    func verifyFetchAppearancesWasNeverCalled(file: StaticString = #file, line: UInt = #line) {
+        guard fetchAppearancesArgs.count == 0 else {
+            XCTFail("Expected 0, but was called \(fetchAppearancesArgs.count) times", file: file, line: line)
             return
         }
     }

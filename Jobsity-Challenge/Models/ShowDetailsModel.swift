@@ -101,6 +101,10 @@ struct Embedded: Codable {
     let cast: [Cast]?
 }
 
+struct PersonEmbedded: Codable {
+    let show: ShowDetailsModel?
+}
+
 struct Cast: Codable, Identifiable{
     var id: Int { person.id ?? 0 }
     let person: Person

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ShowDetailsView: View {
-    @ObservedObject var viewModel: ShowDetailsViewModel = .init()
+    @StateObject var viewModel: ShowDetailsViewModel = .init()
     let show: ShowDetailsModel
     @State var season = 1
     
@@ -31,7 +31,9 @@ struct ShowDetailsView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
                             ForEach(viewModel.episodes) { episode in
-                                EpisodeView(episode: episode)
+                                NavigationLink(destination: EpisodeDetailsView(showName: show.name ?? "", episode: episode)) {
+                                    EpisodeView(episode: episode)
+                                }
                             }
                             .frame(maxWidth: 300)
                         }
@@ -47,7 +49,7 @@ struct ShowDetailsView: View {
                     if let genres = show.genres {
                         InfoView(title: "Genre", info: genres.first ?? "" )
                     }
-                
+                    
                     if let year = show.premiered {
                         InfoView(title: "Released", info: "\(year.prefix(4))")
                     }
@@ -73,7 +75,9 @@ struct ShowDetailsView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 25) {
                                 ForEach(cast) { member in
-                                    CastDetail(cast: member)
+                                    NavigationLink(destination: PersonDetailView(cast: member)) {
+                                        CastDetail(cast: member)
+                                    }
                                 }
                                 .frame(maxWidth: 150)
                             }
@@ -88,6 +92,7 @@ struct ShowDetailsView: View {
         }
     }
 }
+
 
 #Preview {
     ShowDetailsView(show: JSONReader.load("ShowDetailsMock"))

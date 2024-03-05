@@ -13,6 +13,7 @@ struct MainDetailsView: View {
     var description: String
     
     @State private var isExpanded = false
+    @State private var imageMirror: Image?
     
     var body: some View {
         VStack(spacing: 8) {
@@ -21,28 +22,33 @@ struct MainDetailsView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .clipped()
+                    .onAppear {
+                        imageMirror = image
+                    }
             } placeholder: {
                 Color.gray
             }
-            Text(title)
-                .font(.title)
-                .fontWeight(.bold)
-            
-            Text(description)
-                .lineLimit(isExpanded ? nil : 3)
-                .overlay(
-                    Button(action: {
-                        isExpanded.toggle()
-                    }) {
-                        Text(isExpanded ? "LESS" : "MORE")
-                            .font(.caption)
-                            .foregroundColor(.blue)
-                            .clipped()
-                    }
-                    , alignment: .bottomTrailing
-                )
-            
+            VStack {
+                Text(title)
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                Text(description)
+                    .lineLimit(isExpanded ? nil : 3)
+                    .overlay(
+                        Button(action: {
+                            isExpanded.toggle()
+                        }) {
+                            Text(isExpanded ? "LESS" : "MORE")
+                                .font(.caption)
+                                .foregroundColor(.blue)
+                                .clipped()
+                        }
+                        , alignment: .bottomTrailing
+                    )
+            }
         }
+        
     }
 }
 

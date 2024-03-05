@@ -13,6 +13,7 @@ struct CastDetail: View {
     var body: some View {
         VStack {
             ProfilePicture(imageURL: cast.person.image?.original ?? "")
+                .frame(width: 100, height: 100)
             
             Text(cast.person.name ?? "")
             Text(cast.character?.name ?? "")
